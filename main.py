@@ -101,38 +101,18 @@ def forecast_lstm(model, batch_size, X):
 	return yhat[0,0]
 
 
-# In[13]:
-
-#lstm_model = fit_lstm(X_train,y_train,1,2,4)
-X_train.shape
-#y_train.shape
-fit_lstm(X_train,y_train,1,1,1)
-
-
-# (X_train.reshape(X_train.shape[0], 1, X_train.shape[1])).shape
-# y_train.reshape(y_train.shape[0],)
-# y_train.shape
-
-# 
-# model = keras.models.Sequential()
-# model.add(keras.layers.recurrent.LSTM(1, batch_input_shape=(1, 1, 1), stateful=True))
-# model.add(keras.layers.Dense(1))
-# model.compile(loss='mean_squared_error', optimizer='adam')
-# model.fit(X_train.reshape(X_train.shape[0], 1, 1), y_train, epochs=5, batch_size=1, verbose=5, shuffle=False)
-# model.reset_states()
-
-# #fit the model
-# lstm_model = fit_lstm(X_train,y_train,
-#                      batch_size=1,
-#                      nb_epoch=1,
-#                      neurons=4)
-
-# In[ ]:
 
 
 
 
-# In[ ]:
+
+#fit the model
+lstm_model = fit_lstm(X_train,y_train,
+                     batch_size=1,
+                     nb_epoch=1,
+                     neurons=4)
+
+
 
 
 
